@@ -23,7 +23,6 @@ Route::get('/health', function() {
     return 'Hello World';
 });
 
-
 Route::post('/sendOrder', [Cart::class, 'send']);
 Route::post('/sendPhone', [Phone::class, 'send']);
 Route::post('/sendEmail', [Email::class, 'send']);
