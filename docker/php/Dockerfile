@@ -33,6 +33,8 @@ WORKDIR /var/www
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN --rm -v $(pwd):/app composer install --ignore-platform-reqs
+
 # Copy existing application directory contents
 COPY . /var/www
 
