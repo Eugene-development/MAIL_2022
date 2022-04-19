@@ -17,6 +17,8 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/local.ini
+    command:
+      "composer install --ignore-platform-reqs"
     networks:
       - boss-network
 
