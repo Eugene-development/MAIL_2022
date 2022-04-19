@@ -14,13 +14,12 @@ class Cart extends Controller
         $token = $request->bearerToken();
 
         if($token == '1'){
-            //            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-            //            Mail::to('orbita88yuliya@yandex.ru')->send(new CartMail($request));
+            Mail::to('komodoff2010@gmail.com')->send(new CartMail($request));
             Mail::to('info@orbita-stroy.com')->send(new CartMail($request));
         }
 
         if($token == '2'){
-//            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
+            Mail::to('komodoff2010@gmail.com')->send(new CartMail($request));
             Mail::to('mebellub@yandex.ru')->send(new CartMail($request));
         }
     }

@@ -16,14 +16,8 @@ class Calculation extends Controller
         $token = $request->bearerToken();
 
         if($token == '4'){
-            //            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-            //            Mail::to('orbita88yuliya@yandex.ru')->send(new CartMail($request));
             Mail::to('komodoff2010@gmail.com')->send(new CalculationMail($request));
-        }
-
-        if($token == '2'){
-            //            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-            Mail::to('mebellub@yandex.ru')->send(new CalculationMail($request));
+            Mail::to('buildnovostroi@gmail.com')->send(new CalculationMail($request));
         }
     }
 }
