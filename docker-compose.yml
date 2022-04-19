@@ -17,6 +17,8 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/local.ini
+    command:
+      "docker run --rm -v $(pwd):/app composer install --ignore-platform-reqsn && chmod -R 777 storage && chmod -R 777 bootstrap/cache"
     networks:
       - boss-network
 
