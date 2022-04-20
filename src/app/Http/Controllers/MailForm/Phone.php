@@ -13,9 +13,9 @@ class Phone extends Controller
     {
         $token = $request->bearerToken();
 
-        if($token == '3'){
-            Mail::to('komodoff2010@gmail.com')->send(new PhoneMail($request));
-            Mail::to('gostremont-direct@yandex.ru')->send(new PhoneMail($request));
+        if($token == env('KEY_GOSTREMONT')){
+            Mail::to(env('MAIL_MAIN'))->send(new PhoneMail($request));
+            Mail::to(env('MAIL_GOSTREMONT'))->send(new PhoneMail($request));
         }
     }
 }

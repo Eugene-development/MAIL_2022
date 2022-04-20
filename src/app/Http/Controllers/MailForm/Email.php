@@ -12,9 +12,10 @@ class Email extends Controller
     public function send(Request $request)
     {
         $token = $request->bearerToken();
-        if($token == '3'){
-            Mail::to('komodoff2010@gmail.com')->send(new EmailMail($request));
-            Mail::to('gostremont-direct@yandex.ru')->send(new EmailMail($request));
+
+        if($token == env('KEY_GOSTREMONT')){
+            Mail::to(env('MAIL_MAIN'))->send(new EmailMail($request));
+            Mail::to(env('MAIL_GOSTREMONT'))->send(new EmailMail($request));
         }
     }
 }
