@@ -27,3 +27,4 @@ Route::post('/sendPhone', [Phone::class, 'send']);
 Route::post('/sendEmail', [Email::class, 'send']);
 Route::post('/sendMeasurement', [Measurement::class, 'send']);
 Route::post('/sendCalculation', [Calculation::class, 'send']);
+Route::post('/sendConsultation', [Calculation::class, 'send']);
