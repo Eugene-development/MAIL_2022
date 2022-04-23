@@ -1,7 +1,7 @@
 @component('mail::message')
     # Получена заявка на консультацию
-    Имя : {{$request->square}}
+    Имя : {{$request->name}}
     Телефон клиента : {{$request->phone}}
-    Адрес объекта : {{$request->type}}
-    Удобное время: {{$request->destroy}}
+    Адрес объекта : {{$request->address}}
+    Удобное время: {{$request->time}}
 @endcomponent
