@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\MailForm\Calculation;
 use App\Http\Controllers\MailForm\Cart;
+use App\Http\Controllers\MailForm\Consultation;
 use App\Http\Controllers\MailForm\Email;
 use App\Http\Controllers\MailForm\Measurement;
+use App\Http\Controllers\MailForm\Offer;
 use App\Http\Controllers\MailForm\Phone;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +29,5 @@ Route::post('/sendPhone', [Phone::class, 'send']);
 Route::post('/sendEmail', [Email::class, 'send']);
 Route::post('/sendMeasurement', [Measurement::class, 'send']);
 Route::post('/sendCalculation', [Calculation::class, 'send']);
-Route::post('/sendConsultation', [Calculation::class, 'send']);
+Route::post('/sendConsultation', [Consultation::class, 'send']);
+Route::post('/sendOffer', [Offer::class, 'send']);
