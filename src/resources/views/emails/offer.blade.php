@@ -3,6 +3,6 @@
     Имя сотрудника : {{$request->name}}
     Должность : {{$request->position}}
     Почта: {{$request->email}}
-    Телефонж: {{$request->phone}}
+    Телефон: {{$request->phone}}
     Предложение: {{$request->comment}}
 @endcomponent
