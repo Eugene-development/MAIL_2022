@@ -7,7 +7,7 @@ use App\Http\Controllers\MailForm\Email;
 use App\Http\Controllers\MailForm\Measurement;
 use App\Http\Controllers\MailForm\Offer;
 use App\Http\Controllers\MailForm\Phone;
-use App\Http\Controllers\MailForm\BioHim\MainFormBH;
+use App\Http\Controllers\BioHim\MainFormBH;
 use Illuminate\Support\Facades\Route;
 
 /*

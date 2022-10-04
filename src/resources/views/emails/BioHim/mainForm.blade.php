@@ -1,7 +1,7 @@
 @component('mail::message')
-# Получена почта для получения рекламного предложения
-Почта клиента: {{$request->email}}
-Вид перекиси : {{$request->brand}}
-Тара для перекиси : {{$request->container}}
-Запрашиваемый объём : {{$request->volume}}
+    # Получен запрос на перекись
+    Почта: {{$request->email}}
+    Вид: {{$request->brand}}
+    Тара: {{$request->container}}
+    Объём : {{$request->volume}}
 @endcomponent
