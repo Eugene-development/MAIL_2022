@@ -7,6 +7,7 @@ use App\Http\Controllers\MailForm\Email;
 use App\Http\Controllers\MailForm\Measurement;
 use App\Http\Controllers\MailForm\Offer;
 use App\Http\Controllers\MailForm\Phone;
+use App\Http\Controllers\MailForm\BioHim\MainFormBH;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/health', function() {
+Route::get('/health', function () {
     return 'Hello World';
 });
 
@@ -31,3 +32,13 @@ Route::post('/sendMeasurement', [Measurement::class, 'send']);
 Route::post('/sendCalculation', [Calculation::class, 'send']);
 Route::post('/sendConsultation', [Consultation::class, 'send']);
 Route::post('/sendOffer', [Offer::class, 'send']);
+
+/*
+|--------------------------------------------------------------------------
+| BioHim
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+Route::post('/sendMainFormBH', [MainFormBH::class, 'send']);
