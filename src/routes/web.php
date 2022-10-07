@@ -41,4 +41,5 @@ Route::post('/sendOffer', [Offer::class, 'send']);
 |
 |
 */
+// TODO через тире
 Route::post('/sendMainFormBH', [MainFormBH::class, 'send']);
