@@ -9,6 +9,7 @@ use App\Http\Controllers\MailForm\Offer;
 use App\Http\Controllers\MailForm\Phone;
 use App\Http\Controllers\BioHim\MainFormBH;
 use App\Http\Controllers\Azbuka\MainFormAzbuka;
+use App\Http\Controllers\Azbuka\SentenceFormAzbuka;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,5 +54,5 @@ Route::post('/sendMainFormBH', [MainFormBH::class, 'send']);
 |
 |
 */
-// TODO через тире
 Route::post('/send-main-form-azbuka', [MainFormAzbuka::class, 'send']);
+Route::post('/send-sentence-form-azbuka', [SentenceFormAzbuka::class, 'send']);
