@@ -8,6 +8,7 @@ use App\Http\Controllers\MailForm\Measurement;
 use App\Http\Controllers\MailForm\Offer;
 use App\Http\Controllers\MailForm\Phone;
 use App\Http\Controllers\BioHim\MainFormBH;
+use App\Http\Controllers\Azbuka\MainFormAzbuka;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,14 @@ Route::post('/sendOffer', [Offer::class, 'send']);
 */
 // TODO через тире
 Route::post('/sendMainFormBH', [MainFormBH::class, 'send']);
+
+/*
+|--------------------------------------------------------------------------
+| Azbuka
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+// TODO через тире
+Route::post('/send-main-form-azbuka', [MainFormAzbuka::class, 'send']);
