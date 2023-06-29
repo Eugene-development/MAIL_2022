@@ -15,7 +15,7 @@ class FormConsultationController extends Controller
         $token = $request->bearerToken();
 
         if ($token == env('KEY_ZOVMSK')) {
-            Mail::to(env('MAIL_ZOVMSK'))->send(new FormConsultation($request));
+            Mail::to(env('MAIL_ZOVMSK'))->send(new FormConsultation($request),);
         }
     }
 }

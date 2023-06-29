@@ -1,8 +1,9 @@
 @component('mail::message')
     # Заявка с сайта zov.top на консультацию
     Имя: {{$request->name}}
-    Должность: {{$request->position}}
-    Почта: {{$request->email}}
     Телефон: {{$request->phone}}
-    Предложение: {{$request->sentence}}
+    Адрес: {{$request->address}}
+    Почта: {{$request->email}}
+    Комментарий: {{$request->comment}}
+    Проект имеется? - {{$request->project}}
 @endcomponent
