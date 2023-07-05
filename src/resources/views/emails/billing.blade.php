@@ -107,22 +107,22 @@
                                     <td class="content-block"
                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                         valign="top">
-                                        <h1 class="aligncenter"
+                                        <h3 class="aligncenter"
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif; box-sizing: border-box; font-size: 32px; color: #000; line-height: 1.2em; font-weight: 500; text-align: center; margin: 40px 0 0;"
-                                            align="center">ЗАКАЗ №</h1>
+                                            align="center">ЗАКАЗ от {{ $request->date }}</h3>
                                     </td>
                                 </tr>
-                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                {{-- <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                     <td class="content-block"
                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                         valign="top">
                                         <h2 class="aligncenter"
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif; box-sizing: border-box; font-size: 24px; color: #000; line-height: 1.2em; font-weight: 400; text-align: center; margin: 40px 0 0;"
                                             align="left">
-                                           {{ $request->products[0]['date'] }}
+                                           {{ $request->date }}
                                         </h2>
                                     </td>
-                                </tr>
+                                </tr> --}}
                                 <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                     <td class="content-block aligncenter"
                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;"
@@ -156,10 +156,10 @@
                                                             <tr style="font-family: 'Hlvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                                 <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; border-top-width: 1px; border-top-color: #eee; border-top-style: solid; margin: 0; padding: 10px 0;"
                                                                     valign="top">
-                                                                    <strong>"{{$row['name']}}"</strong><br>
-                                                                    ID {{$row['id']}}<br>
-                                                                    Количество - {{$row['quantity']}} {{$row['unit']}}.<br>
-                                                                    Цена - {{$row['size'][0]['price']['price']}} ₽/{{$row['unit']}}
+                                                                    <strong>"{{$row['value']}}"</strong><br>
+                                                                     ID {{$row['id']}}<br>
+                                                                     Количество - {{$row['quantity']}} {{$row['unit']['value']}}.<br>
+                                                                     Цена - {{$row['price']['value']}} ₽/{{$row['unit']['value']}}
                                                                 </td>
 {{--                                                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; border-top-width: 1px; border-top-color: #eee; border-top-style: solid; margin: 0; padding: 10px 0;"--}}
 {{--                                                                    valign="top">--}}
@@ -170,7 +170,8 @@
 {{--                                                                </td>--}}
                                                                 <td class="alignright"
                                                                     style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #eee; border-top-style: solid; margin: 0; padding: 10px 0;"
-                                                                    align="right" valign="top"> {{$row['size'][0]['price']['price'] *  $row['quantity']}} ₽
+                                                                    align="right" valign="top">
+                                                                     Итого: {{$row['price']['value'] *  $row['quantity']}} ₽
 {{--                                                                    align="right" valign="top"> {{$row['discount_price'] * $row['quantity']}} ₽--}}
                                                                 </td>
                                                             </tr>
@@ -184,7 +185,7 @@
                                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                             <td class="alignright" width="80%"
                                                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #333; border-top-style: solid; border-bottom-color: #333; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 5px 0;"
-                                                                align="right" valign="top">Итого (с учётом скидки):
+                                                                align="right" valign="top">Итого (с учётом скидки 5%):
                                                             </td>
                                                             <td class="alignright"
                                                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #333; border-top-style: solid; border-bottom-color: #333; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 5px 0;"

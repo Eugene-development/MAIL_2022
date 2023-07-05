@@ -13,14 +13,14 @@ class Cart extends Controller
     {
         $token = $request->bearerToken();
 
-        if($token == env('KEY_ORBITA')) {
+        if ($token == env('KEY_ORBITA')) {
             Mail::to(env('MAIL_MAIN'))->send(new CartMail($request));
             Mail::to(env('MAIL_ORBITA'))->send(new CartMail($request));
         }
 
-        if($token == env('KEY_LUBAMEBEL')) {
-            Mail::to(env('MAIL_MAIN'))->send(new CartMail($request));
-            Mail::to(env('MAIL_LUBAMEBEL'))->send(new CartMail($request));
-        }
+        // if($token == env('KEY_LUBAMEBEL')) {
+        //     Mail::to(env('MAIL_MAIN'))->send(new CartMail($request));
+        //     Mail::to(env('MAIL_LUBAMEBEL'))->send(new CartMail($request));
+        // }
     }
 }

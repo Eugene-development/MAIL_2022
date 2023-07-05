@@ -32,5 +32,4 @@ class CartMail extends Mailable
     {
         return $this->markdown('emails.billing');
     }
-
 }
