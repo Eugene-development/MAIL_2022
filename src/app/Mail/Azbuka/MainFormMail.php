@@ -10,7 +10,6 @@ use Illuminate\Queue\SerializesModels;
 class MainFormMail extends Mailable
 {
     use Queueable, SerializesModels;
-
     /**
      * Create a new message instance.
      *
