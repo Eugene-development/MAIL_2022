@@ -15,7 +15,9 @@ class Cart extends Controller
 
         if ($token == env('KEY_ORBITA')) {
             Mail::to(env('MAIL_MAIN'))->send(new CartMail($request));
-            Mail::to(env('MAIL_ORBITA'))->send(new CartMail($request));
+            Mail::to(env('MAIL_ORBITA_SV'))->send(new CartMail($request));
+            Mail::to(env('MAIL_ORBITA_ELNARA'))->send(new CartMail($request));
+            Mail::to(env('MAIL_ORBITA_JULIA'))->send(new CartMail($request));
         }
 
         // if($token == env('KEY_LUBAMEBEL')) {
