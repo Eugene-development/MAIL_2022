@@ -11,6 +11,7 @@ use App\Http\Controllers\BioHim\MainFormBH;
 use App\Http\Controllers\Azbuka\MainFormAzbuka;
 use App\Http\Controllers\Azbuka\SentenceFormAzbuka;
 use App\Http\Controllers\ZOV\FormConsultationController;
+use App\Http\Controllers\Orbita\CartDZRController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,3 +69,13 @@ Route::post('/send-sentence-form-azbuka', [SentenceFormAzbuka::class, 'send']);
 |
 */
 Route::post('/sendFormConsultationZOV', [FormConsultationController::class, 'send']);
+
+/*
+|--------------------------------------------------------------------------
+| Orbita
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+Route::post('/send-order-orbita-dzr', [CartDZRController::class, 'send']);
