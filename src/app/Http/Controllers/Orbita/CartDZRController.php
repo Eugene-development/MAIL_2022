@@ -16,9 +16,9 @@ class CartDZRController extends Controller
 
         if ($token == env('KEY_ORBITA')) {
             Mail::to(env('MAIL_MAIN'))->send(new OrderMail($request));
-            Mail::to(env('MAIL_ORBITA_SV'))->send(new OrderMail($request));
-            Mail::to(env('MAIL_ORBITA_ELNARA'))->send(new OrderMail($request));
-            Mail::to(env('MAIL_ORBITA_JULIA'))->send(new OrderMail($request));
+            // Mail::to(env('MAIL_ORBITA_SV'))->send(new OrderMail($request));
+            // Mail::to(env('MAIL_ORBITA_ELNARA'))->send(new OrderMail($request));
+            // Mail::to(env('MAIL_ORBITA_JULIA'))->send(new OrderMail($request));
         }
     }
 }
