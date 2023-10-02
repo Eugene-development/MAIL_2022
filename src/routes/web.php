@@ -11,6 +11,7 @@ use App\Http\Controllers\BioHim\MainFormBH;
 use App\Http\Controllers\Azbuka\MainFormAzbuka;
 use App\Http\Controllers\Azbuka\SentenceFormAzbuka;
 use App\Http\Controllers\ZOV\FormConsultationController;
+use App\Http\Controllers\ZOV\FormCalculationController;
 use App\Http\Controllers\Orbita\CartDZRController;
 use Illuminate\Support\Facades\Route;
 
@@ -69,6 +70,7 @@ Route::post('/send-sentence-form-azbuka', [SentenceFormAzbuka::class, 'send']);
 |
 */
 Route::post('/sendFormConsultationZOV', [FormConsultationController::class, 'send']);
+Route::post('/send-form-calculation-ZOV', [FormCalculationController::class, 'send']);
 
 /*
 |--------------------------------------------------------------------------
