@@ -14,6 +14,7 @@ use App\Http\Controllers\ZOV\FormConsultationController;
 use App\Http\Controllers\ZOV\FormCalculationController;
 use App\Http\Controllers\Orbita\CartDZRController;
 use App\Http\Controllers\RemStroyPro\CartRemStroyProController;
+use App\Http\Controllers\Novostroy\RequestNovostroyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -82,5 +83,15 @@ Route::post('/send-form-calculation-ZOV', [FormCalculationController::class, 'se
 |
 |
 */
-// Route::post('/send-order-orbita-dzr', [CartDZRController::class, 'send']);
+Route::post('/send-order-orbita-dzr', [CartDZRController::class, 'send']);
 Route::post('/send-order-remstroypro', [CartRemStroyProController::class, 'send']);
+
+/*
+|--------------------------------------------------------------------------
+| Novostroy
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+Route::post('/send-request', [RequestNovostroyController::class, 'send']);
