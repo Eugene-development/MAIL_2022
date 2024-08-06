@@ -15,6 +15,7 @@ class CartRemStroyProController extends Controller
     
         if ($token == env('KEY_REMSTROYPRO')) {
             Mail::to(env('MAIL_MAIN'))->send(new OrderMail($request));
+            Mail::to(env('MAIL_ORBITA_IRA'))->send(new OrderMail($request));
         }
     }
 }
