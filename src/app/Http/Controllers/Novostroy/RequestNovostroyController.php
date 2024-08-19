@@ -11,10 +11,10 @@ use App\Mail\Novostroy\FormRequest;
 
 class RequestNovostroyController extends Controller
 {
-    public function send(Request $request) : void
+    public function send(Request $request): void
     {
         $token = $request->bearerToken();
-    
+
         if ($token == env('KEY_NOVOSTROY')) {
             Mail::to(env('MAIL_MAIN'))->send(new FormRequest($request));
         }
