@@ -94,4 +94,6 @@ Route::post('/send-order-remstroypro', [CartRemStroyProController::class, 'send'
 |
 |
 */
-Route::post('/send-request', [RequestNovostroyController::class, 'send']);
+Route::post('/send-form-designer-request', [RequestNovostroyController::class, 'send']);
+Route::post('/send-form-measuring-request', [RequestNovostroyController::class, 'send']);
+Route::post('/send-form-salon-request', [RequestNovostroyController::class, 'send']);
