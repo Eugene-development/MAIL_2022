@@ -40,6 +40,7 @@ Route::post('/sendCalculation', [Calculation::class, 'send']);
 Route::post('/sendConsultation', [Consultation::class, 'send']);
 Route::post('/sendOffer', [Offer::class, 'send']);
 
+
 /*
 |--------------------------------------------------------------------------
 | BioHim
@@ -51,6 +52,7 @@ Route::post('/sendOffer', [Offer::class, 'send']);
 // TODO через тире
 // Route::post('/sendMainFormBH', [MainFormBH::class, 'send']);
 Route::post('/send-form-request-price', [MainFormBH::class, 'send']);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +66,7 @@ Route::post('/send-main-form-azbuka', [MainFormAzbuka::class, 'send']);
 Route::post('/send-sentence-form-azbuka', [SentenceFormAzbuka::class, 'send']);
 
 
+
 /*
 |--------------------------------------------------------------------------
 | ZOV
@@ -75,6 +78,7 @@ Route::post('/send-sentence-form-azbuka', [SentenceFormAzbuka::class, 'send']);
 Route::post('/sendFormConsultationZOV', [FormConsultationController::class, 'send']);
 Route::post('/send-form-calculation-ZOV', [FormCalculationController::class, 'send']);
 
+
 /*
 |--------------------------------------------------------------------------
 | Orbita
@@ -85,6 +89,7 @@ Route::post('/send-form-calculation-ZOV', [FormCalculationController::class, 'se
 */
 Route::post('/send-order-orbita-dzr', [CartDZRController::class, 'send']);
 Route::post('/send-order-remstroypro', [CartRemStroyProController::class, 'send']);
+
 
 /*
 |--------------------------------------------------------------------------
