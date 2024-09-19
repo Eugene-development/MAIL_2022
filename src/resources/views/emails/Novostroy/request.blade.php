@@ -14,4 +14,7 @@
     ## Консультация дизайнера
     Проект имеется? - {{$request->project}}
 
+    ## Просчёт проекта
+    Проект - {{$request->selectedProject}}
+
 @endcomponent

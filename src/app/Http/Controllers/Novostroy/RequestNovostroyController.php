@@ -16,6 +16,7 @@ class RequestNovostroyController extends Controller
         $token = $request->bearerToken();
 
         if ($token == env('KEY_NOVOSTROY')) {
+            Mail::to(env('MAIL_NOVOSTROY'))->send(new FormRequest($request));
             Mail::to(env('MAIL_MAIN'))->send(new FormRequest($request));
         }
     }
