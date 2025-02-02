@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Novostroy\FormRequest;
 
-class UpdateNovostroyController extends Controller
+class InstallationNovostroyController extends Controller
 {
     public function send(Request $request): void
     {
