@@ -14,7 +14,14 @@ use App\Http\Controllers\ZOV\FormConsultationController;
 use App\Http\Controllers\ZOV\FormCalculationController;
 use App\Http\Controllers\Orbita\CartDZRController;
 use App\Http\Controllers\RemStroyPro\CartRemStroyProController;
+
+use App\Http\Controllers\Novostroy\ConsultationNovostroyController;
+use App\Http\Controllers\Novostroy\DesignProjectNovostroyController;
+use App\Http\Controllers\Novostroy\FurnitureProjectNovostroyController;
+use App\Http\Controllers\Novostroy\InstallationNovostroyController;
+use App\Http\Controllers\Novostroy\MeasurementNovostroyController;
 use App\Http\Controllers\Novostroy\RequestNovostroyController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,6 +98,18 @@ Route::post('/send-order-orbita-dzr', [CartDZRController::class, 'send']);
 Route::post('/send-order-remstroypro', [CartRemStroyProController::class, 'send']);
 
 
+// /*
+// |--------------------------------------------------------------------------
+// | Novostroy
+// |--------------------------------------------------------------------------
+// |
+// |
+// |
+// */
+// Route::post('/send-form-designer-request', [RequestNovostroyController::class, 'send']);
+// Route::post('/send-form-measuring-request', [RequestNovostroyController::class, 'send']);
+// Route::post('/send-form-salon-request', [RequestNovostroyController::class, 'send']);
+// Route::post('/send-form-price-request', [RequestNovostroyController::class, 'send']);
 /*
 |--------------------------------------------------------------------------
 | Novostroy
@@ -99,7 +118,8 @@ Route::post('/send-order-remstroypro', [CartRemStroyProController::class, 'send'
 |
 |
 */
-Route::post('/send-form-designer-request', [RequestNovostroyController::class, 'send']);
-Route::post('/send-form-measuring-request', [RequestNovostroyController::class, 'send']);
-Route::post('/send-form-salon-request', [RequestNovostroyController::class, 'send']);
-Route::post('/send-form-price-request', [RequestNovostroyController::class, 'send']);
+Route::post('/send-form-consultation', [ConsultationNovostroyController::class, 'send']);
+Route::post('/send-form-design-project', [DesignProjectNovostroyController::class, 'send']);
+Route::post('/send-form-measurement', [MeasurementNovostroyController::class, 'send']);
+Route::post('/send-form-furniture-project', [FurnitureProjectNovostroyController::class, 'send']);
+Route::post('/send-form-installation', [InstallationNovostroyController::class, 'send']);
