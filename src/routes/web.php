@@ -122,4 +122,4 @@ Route::post('/send-form-consultation', [ConsultationNovostroyController::class, 
 Route::post('/send-form-design-project', [DesignProjectNovostroyController::class, 'send']);
 Route::post('/send-form-measurement', [MeasurementNovostroyController::class, 'send']);
 Route::post('/send-form-furniture-project', [FurnitureProjectNovostroyController::class, 'send']);
-Route::post('/send-form-installation', [InstallationNovostroyController::class, 'send']);
+Route::post('/send-form-assembly-and-installation', [InstallationNovostroyController::class, 'send']);

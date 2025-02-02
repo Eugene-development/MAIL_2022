@@ -2,8 +2,8 @@
     # Запрос с сайта Новострой
     Имя: {{$request->name}}
     Телефон: {{$request->phone}}
-    Почта: {{$request->email}}
-    Комментарий: {{$request->comment}}
+    {{-- Почта: {{$request->email}}
+    Комментарий: {{$request->comment}} --}}
 
     {{-- ## Заявка на замер
     Адрес: {{$request->address}}

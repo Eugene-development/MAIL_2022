@@ -1,11 +1,11 @@
 @component('mail::message')
     # Замер с сайта Новострой
     Имя: {{$request->name}}
-    {{-- Телефон: {{$request->phone}}
+    Телефон: {{$request->phone}}
     Почта: {{$request->email}}
     Комментарий: {{$request->comment}}
 
-    ## Заявка на замер
+    {{-- ## Заявка на замер
     Адрес: {{$request->address}}
 
     ## Запись в салон
