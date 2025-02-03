@@ -1,5 +1,5 @@
 @component('mail::message')
-    # Замер с сайта Новострой
+    # Запрос на замер (Новострой)
     Имя: {{$request->name}}
     Телефон: {{$request->phone}}
     Почта: {{$request->email}}

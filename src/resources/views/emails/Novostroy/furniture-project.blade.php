@@ -1,5 +1,5 @@
 @component('mail::message')
-    # Проект Мебели с сайта Новострой
+    # Запрос на Проект Мебели (Новострой)
     Имя: {{$request->name}}
     Телефон: {{$request->phone}}
     Почта: {{$request->email}}

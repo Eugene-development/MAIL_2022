@@ -1,5 +1,5 @@
 @component('mail::message')
-    # Запрос с сайта Новострой
+    # Запрос на консультацию (Новострой)
     Имя: {{$request->name}}
     Телефон: {{$request->phone}}
     Почта: {{$request->email}}
