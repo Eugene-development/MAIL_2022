@@ -1,5 +1,5 @@
 @component('mail::message')
-    # Установка с сайта Новострой
+    # Заявка на монтаж (Новострой)
     Имя: {{$request->name}}
     Телефон: {{$request->phone}}
     Почта: {{$request->email}}
