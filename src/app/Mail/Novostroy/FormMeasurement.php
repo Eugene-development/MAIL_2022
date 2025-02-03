@@ -17,10 +17,12 @@ class FormMeasurement extends Mailable
      * @return void
      */
     public $request;
+    public $date;
 
     public function __construct(Request $request)
     {
         $this->request = $request;
+        $this->date = now()->setTimezone('Europe/Moscow');
     }
 
     /**
