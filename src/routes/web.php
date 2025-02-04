@@ -20,8 +20,9 @@ use App\Http\Controllers\Novostroy\DesignProjectNovostroyController;
 use App\Http\Controllers\Novostroy\FurnitureProjectNovostroyController;
 use App\Http\Controllers\Novostroy\InstallationNovostroyController;
 use App\Http\Controllers\Novostroy\MeasurementNovostroyController;
-use App\Http\Controllers\Novostroy\RequestNovostroyController;
+// use App\Http\Controllers\Novostroy\RequestNovostroyController;
 use App\Http\Controllers\Novostroy\PriceNovostroyController;
+use App\Http\Controllers\Novostroy\SubscriptionNovostroyController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -125,3 +126,4 @@ Route::post('/send-form-measurement', [MeasurementNovostroyController::class, 's
 Route::post('/send-form-furniture-project', [FurnitureProjectNovostroyController::class, 'send']);
 Route::post('/send-form-assembly-and-installation', [InstallationNovostroyController::class, 'send']);
 Route::post('/send-form-price', [PriceNovostroyController::class, 'send']);
+Route::post('/send-form-subscribe', [SubscriptionNovostroyController::class, 'send']);
